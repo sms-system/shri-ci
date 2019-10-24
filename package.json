@@ -1,0 +1,7 @@
+{
+  "name": "ci",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Serge Smirnov <sms-system@shri2018.yaconnect.com>",
+  "license": "MIT"
+}

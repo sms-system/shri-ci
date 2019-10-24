@@ -1,0 +1,57 @@
+#app {
+  margin: 0;
+  padding: 16px;
+  background: #000;
+  color: white;
+}
+.body {
+  margin: 0;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+}
+hr {
+  border-color: #4caf50;
+}
+a {
+  color: #47ceff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+b {
+  color: #52ff59;
+}
+ol {
+  margin: 0;
+}
+ol li {
+  margin: 8px 0;
+}
+
+.danger { background:#600;padding: 8px;border-left:solid 2px; }
+.status-success { color: #0f0; }
+.status-error { color: #f00; }
+.status-wait { color: #444;animation: wait 3s infinite; }
+.status-empty { color: #777; }
+
+label { color: #ffeb3b; }
+input, textarea, .textarea {
+  background: #05100a;
+  border: 0;
+  border-bottom: 1px solid #0f0;
+  padding: 4px;
+  color: #fff;
+  outline: none;
+  font-family: "Courier New", monospace;
+  width: 400px;
+  font-size: 12px;
+}
+.textarea { width: auto; }
+textarea { resize: vertical; }
+
+@keyframes wait {
+  0% { color: #444; }
+  50% { color: #aaa; }
+  100% { color: #444; }
+}

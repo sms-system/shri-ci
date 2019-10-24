@@ -1,0 +1,28 @@
+version: '3'
+services:
+  agent1:
+    image: micro-ci-agent-shri
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+    - SERVER_URL=http://server:8000
+    links:
+    - server
+
+  agent2:
+    image: micro-ci-agent-shri
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+    - SERVER_URL=http://server:8000
+    links:
+    - server
+
+  server:
+    image: micro-ci-server-shri
+    environment:
+    - DEFAULT_REPOSITORY=https://github.com/sms-system/fuzzy-barnacle
+    - DEFAULT_HASH=react
+    - DEFAULT_IMAGE=node:alpine
+    ports:
+    - 8000:8000
